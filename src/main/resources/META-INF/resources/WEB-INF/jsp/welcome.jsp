@@ -8,6 +8,6 @@
 </head>
 <body>
 	<h1>Portale SC</h1>
-	<h3>Benvenut*, ${name} ${surname}!</h3>
+	<h3>Benvenut*, ${name} ${surname} del progetto ${project}</h3>
 </body>
 </html>

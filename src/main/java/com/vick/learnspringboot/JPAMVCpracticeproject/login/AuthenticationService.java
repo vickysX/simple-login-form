@@ -15,13 +15,10 @@ public class AuthenticationService {
 	
 	public boolean authenticate(String name, String surname, String password) {
 		List<Volunteer> volunteers = volunteerRepository.findAll();	
-		for (Volunteer volunteer : volunteers) {
-			if (volunteer.getName() == name && 
-					volunteer.getSurname() == surname && 
-					volunteer.getPassword() == password) {
-				return true;
-			}
-		}
-		return false;
+		return volunteers.stream()
+				.anyMatch(vol -> vol.getName().equalsIgnoreCase(name) && 
+				vol.getSurname().equalsIgnoreCase(surname) && 
+				vol.getPassword().equals(password));
+
 	}
 }

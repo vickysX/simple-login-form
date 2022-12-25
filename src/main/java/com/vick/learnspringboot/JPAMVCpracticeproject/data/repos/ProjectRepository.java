@@ -10,5 +10,5 @@ import com.vick.learnspringboot.JPAMVCpracticeproject.data.Project;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long>{
-	List<Project> findByName(String name);
+	Optional<Project> findByName(String name);
 }

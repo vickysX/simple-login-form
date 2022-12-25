@@ -24,11 +24,12 @@ public class Volunteer {
 		
 	}
 
-	public Volunteer(long id, String name, String surname, Project project) {
+	public Volunteer(long id, String name, String surname, String password, Project project) {
 		super();
 		this.id = id;
 		this.name = name;
 		this.surname = surname;
+		this.password = password;
 		this.project = project;
 	}
 

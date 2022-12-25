@@ -24,14 +24,14 @@ public class DataCommandLineRunner implements CommandLineRunner{
 		projectRepository.save(new Project(3, "Ri-generazioni Putignano"));
 		System.out.println(projectRepository.findAll());
 		Project socialNetworks = projectRepository.findById(1l).get();
-		volunteerRepository.save(new Volunteer(1, "Vic", "Sx", socialNetworks));
-		volunteerRepository.save(new Volunteer(2, "Mau", "Tzerom", socialNetworks));
-		Project cascina = projectRepository.findByName("Ri-generazioni Cascina").get(0);
-		volunteerRepository.save(new Volunteer(3, "Hermione", "Trepiani", cascina));
-		volunteerRepository.save(new Volunteer(4, "Pino", "Pec", cascina));
-		Project putignano = projectRepository.findByName("Ri-generazioni Putignano").get(0);	
-		volunteerRepository.save(new Volunteer(5, "Vale", "Giu", putignano));
-		volunteerRepository.save(new Volunteer(6, "Simo", "Cog", putignano));
+		volunteerRepository.save(new Volunteer(1, "Vic", "Sx", "myPass1", socialNetworks));
+		volunteerRepository.save(new Volunteer(2, "Mau", "Tzerom","myPass2", socialNetworks));
+		Project cascina = projectRepository.findByName("Ri-generazioni Cascina").get();
+		volunteerRepository.save(new Volunteer(3, "Hermione", "Trepiani", "myPass3", cascina));
+		volunteerRepository.save(new Volunteer(4, "Pino", "Pec", "myPass4", cascina));
+		Project putignano = projectRepository.findByName("Ri-generazioni Putignano").get();	
+		volunteerRepository.save(new Volunteer(5, "Vale", "Giu", "myPass4", putignano));
+		volunteerRepository.save(new Volunteer(6, "Simo", "Cog", "myPass5", putignano));
 		System.out.println(volunteerRepository.findAll());
 	}
 
