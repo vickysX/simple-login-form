@@ -10,6 +10,7 @@ CREATE TABLE Ragazz
 	id BIGINT UNIQUE NOT NULL,
 	name VARCHAR(100) NOT NULL,
 	surname VARCHAR(100) NOT NULL,
+	password VARCHAR(20) NOT NULL,
 	project_id INTEGER NOT NULL,
 	PRIMARY KEY (id),
 	FOREIGN KEY (project_id) REFERENCES Projects (id)

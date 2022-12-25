@@ -7,6 +7,7 @@
 <title>Benvenut* nel portale SC</title>
 </head>
 <body>
-
+	<h1>Portale SC</h1>
+	<h3>Benvenut*, ${name} ${surname}!</h3>
 </body>
 </html>

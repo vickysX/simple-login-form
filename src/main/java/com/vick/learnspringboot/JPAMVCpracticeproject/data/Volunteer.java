@@ -15,6 +15,8 @@ public class Volunteer {
 	
 	private String surname;
 	
+	private String password;
+	
 	@ManyToOne
 	private Project project;
 	
@@ -52,6 +54,14 @@ public class Volunteer {
 
 	public void setSurname(String surname) {
 		this.surname = surname;
+	}
+	
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
 	}
 
 	public Project getProject() {
